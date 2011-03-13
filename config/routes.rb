@@ -3,7 +3,7 @@ Gemnotifier::Application.routes.draw do
   root :to => "home#index"
   
   match 'search', :to => "home#search"
-  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/github_callback', :to => 'sessions#create'
   
   get "hooks/gems"
   post "hooks/gems"
