@@ -1,6 +1,7 @@
 Gemnotifier::Application.routes.draw do
   root :to => "home#index"
-
+  match 'search', :to => "home#search"
+  
   get "hooks/gems"
   post "hooks/gems"
   # The priority is based upon order of creation:

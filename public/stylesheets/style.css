@@ -44,6 +44,9 @@ a:hover {
   width: 780px;
   margin: 0 auto;
 }
+.clear {
+  clear: both;
+}
 html {
     height: 100%;
 }
@@ -75,6 +78,57 @@ ul.gems_list li:hover {
   padding: 20px 0;
 }
 #intro h2 {
+  font-weight: bold;
+}
+#search {
+  margin: 20px 0;
+}
+#search h3 {
+  font-weight: bold;
+}
+#search form {
+  background: #f1f1f1;
+  padding: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#search form .text_field {
+  float: left;
+  width: 70%;
+}
+#search form .text_field input[type='text'] {
+  width: 518px;
+  border: 1px solid #bbb;
+  margin: 0;
+  padding: 10px;
+  display: block;
+}
+#search form .button_field {
+  float: right;
+  width: 30%;
+}
+#search form .button_field input[type='submit'] {
+  border: 1px solid #bbb;
+  text-align: center;
+  background: #E6E6E6;
+  color: #666;
+  padding: 9px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #FFFFFF;
+  display: block;
+  width: 100%;
+}
+#search form .button_field input[type='submit']:hover {
+  background: #8ecc4c;
+  color: #fff;
+  text-shadow: none;
+  
+}
+#search_results h3 {
+  margin: 20px 0;
   font-weight: bold;
 }
 #foot .wraper {

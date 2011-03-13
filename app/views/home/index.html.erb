@@ -2,12 +2,16 @@
     <h2>Welcome to GemNotifier</h2>
     <p>Subscribe gems for upgrade notifications.</p>
 </div>
-<ul class="gems_list">
-    <% @gem_items.each do |gem_item| %>
-        <li>
-          <span class="gem_name"><%= gem_item.name %></span>  
-          <span class="gem_ver">(<%= gem_item.version %>)</span>
-        </li>
+<div id="search">
+    <h3>Search Gems</h3>
+    <%= form_tag('/search', :method => :get) do %>
+        <div class="text_field">
+            <%= text_field_tag :query %>
+        </div>
+        <div class="button_field">
+            <%= submit_tag "Search" %>
+        </div>
+        <div class="clear"></div>
     <% end %>
-</ul>
-<%= paginate @gem_items %>
+</div>
+<%= render :partial => 'gems_list' %>
