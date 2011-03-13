@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110312120536) do
+ActiveRecord::Schema.define(:version => 20110313060305) do
 
   create_table "gem_items", :force => true do |t|
     t.string   "name"
-    t.string   "info"
+    t.text     "info",              :limit => 255
     t.string   "version"
     t.integer  "version_downloads"
     t.string   "authors"
