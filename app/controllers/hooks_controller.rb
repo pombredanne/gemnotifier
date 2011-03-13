@@ -1,7 +1,7 @@
 class HooksController < ApplicationController
   
   def gems
-    gem_item = GemItem.where(params[:name]).first
+    gem_item = GemItem.where(:name => params[:name]).first
     if gem_item.nil?
       gem_item = GemItem.create(params)
     else
