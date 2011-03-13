@@ -1,6 +1,6 @@
 Gemnotifier::Application.routes.draw do
   get "hooks/gems"
-
+  post "hooks/gems"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
