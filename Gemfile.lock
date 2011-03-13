@@ -37,6 +37,8 @@ GEM
     httparty (0.6.1)
       crack (= 0.1.8)
     i18n (0.5.0)
+    kaminari (0.10.4)
+      rails (>= 3.0.0)
     linecache (0.43)
     mail (2.2.15)
       activesupport (>= 2.3.6)
@@ -80,6 +82,7 @@ PLATFORMS
 
 DEPENDENCIES
   httparty
+  kaminari
   rails (= 3.0.5)
   ruby-debug
   sqlite3
