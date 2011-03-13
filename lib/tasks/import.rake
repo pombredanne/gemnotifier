@@ -20,8 +20,8 @@ namespace :import do
   
   desc "Load Gem Info"
   task :load_gem_info => :environment do
-    where_opt = ENV['from_id'].present? ? "id > #{ENV['from_id']}" : {}
-    GemItem.where(where_opt).find_each do |gem_item|
+    opt = ENV['from_id'].present? ? { :start => ENV['from_id'].to_i } : {}
+    GemItem.find_each(opt) do |gem_item|
       response = HTTParty.get("http://rubygems.org/api/v1/gems/#{gem_item.name}.json")
       gem_hash = ActiveSupport::JSON.decode(response.body)
       gem_item.update_attributes(gem_hash)
