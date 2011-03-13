@@ -21,7 +21,7 @@ namespace :import do
   desc "Load Gem Info"
   task :load_gem_info => :environment do
     GemItem.find_each do |gem_item|
-      response = HTTParty.get("http://rubygems.org/api/v1/gems/rails.json")
+      response = HTTParty.get("http://rubygems.org/api/v1/gems/#{gem_item.name}.json")
       gem_hash = ActiveSupport::JSON.decode(response.body)
       gem_item.update_attributes(gem_hash)
       puts "Updated gem: #{gem_item.name}."
