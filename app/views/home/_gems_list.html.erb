@@ -1,0 +1,9 @@
+<ul class="gems_list">
+    <% @gem_items.each do |gem_item| %>
+        <li>
+          <span class="gem_name"><%= gem_item.name %></span>  
+          <span class="gem_ver">(<%= gem_item.version %>)</span>
+        </li>
+    <% end %>
+</ul>
+<%= paginate @gem_items %>
