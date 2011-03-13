@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110313060305) do
+ActiveRecord::Schema.define(:version => 20110313075308) do
 
   create_table "gem_items", :force => true do |t|
     t.string   "name"
     t.text     "info",              :limit => 255
     t.string   "version"
     t.integer  "version_downloads"
-    t.string   "authors"
+    t.text     "authors",           :limit => 255
     t.integer  "downloads"
     t.string   "project_uri"
     t.string   "gem_uri"
