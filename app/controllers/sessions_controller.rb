@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
       @auth = Authorization.create_from_auth(auth)
     end
     self.current_user = @auth.user
+    redirect_to '/'
   end
 
   def destroy
