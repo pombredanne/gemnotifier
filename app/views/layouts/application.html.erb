@@ -11,6 +11,11 @@
     <div id="head">
         <div class="wraper">
             <h1><a href="/">GemNotifier</a></h1>
+            <% if current_user %>
+            <div id="user_info">
+                <span>Login as <strong><%= current_user.email %></strong></span><a href="/sign_out">Sign Out</a>
+            </div>
+            <% end %>
         </div>
     </div>
     <div id="content">

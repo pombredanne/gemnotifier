@@ -1,6 +1,9 @@
 <div id="intro">
     <h2>Welcome to GemNotifier</h2>
     <p>Subscribe gems for upgrade notifications.</p>
+    <% if current_user.nil? %>
+        <a href="/auth/github" class="signin">Sign In With Github</a>
+    <% end %>
 </div>
 <div id="search">
     <h3>Search Gems</h3>

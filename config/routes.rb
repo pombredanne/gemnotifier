@@ -4,6 +4,7 @@ Gemnotifier::Application.routes.draw do
   
   match 'search', :to => "home#search"
   match '/auth/:provider/callback', :to => 'sessions#create'
+  match 'sign_out', :to => 'sessions#destroy'
   
   get "hooks/gems"
   post "hooks/gems"
