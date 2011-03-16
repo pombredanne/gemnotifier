@@ -1,6 +1,10 @@
 $(function(){
   
   $("a.sub_btn").live('click', function(){
+    if(!logged_in) {
+      alert("You must login to subscribe");
+      return
+    }
     var gem_id = $(this).attr("rel");
     var gem_ele = $(this).parent();
     $(this).hide();
