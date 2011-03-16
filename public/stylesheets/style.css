@@ -87,13 +87,13 @@ ul.gems_list li {
 ul.gems_list li:hover {
   background: #f5f5f5;
 }
-ul.gems_list li a.sub_btn {
+ul.gems_list li a.sub_btn, ul.gems_list li a.unsub_btn, ul.gems_list li span.subscribing, ul.gems_list li span.unsubscribing {
   display: none;
   position: absolute;
   top: 10px;
   right: 10px;
 }
-ul.gems_list li:hover a.sub_btn {
+ul.gems_list li:hover a.sub_btn, ul.gems_list li:hover a.unsub_btn {
   display: inline-block;
 }
 #intro {

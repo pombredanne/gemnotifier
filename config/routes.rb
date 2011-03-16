@@ -1,5 +1,8 @@
 Gemnotifier::Application.routes.draw do
 
+  post "subscribe", :to => "subscribe#create"
+  post "unsubscribe", :to => "subscribe#destroy"
+
   root :to => "home#index"
   
   match 'search', :to => "home#search"
