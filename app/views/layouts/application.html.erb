@@ -28,6 +28,13 @@
             <p>Copyright &copy; intridea inc.</p>
         </div>
     </div>
+    <script type="text/javascript" charset="utf-8">
+        <% if current_user %>
+            var logged_in = true;
+        <% else %>
+            var logged_in = false;
+        <% end %>
+    </script>
     <%= javascript_include_tag :defaults %>
 </body>
 </html>
