@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110315121526) do
+ActiveRecord::Schema.define(:version => 20110318113933) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(:version => 20110315121526) do
     t.string   "source_code_uri"
     t.string   "bug_tracker_uri"
     t.text     "dependencies"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "gem_item_id"
+    t.string   "version"
+    t.datetime "upgraded_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
