@@ -4,9 +4,9 @@ class CreateGemItems < ActiveRecord::Migration
       t.string :name
       t.string :info
       t.string :version
-      t.integer :version_downloads
+      t.integer :version_downloads, :default => 0
       t.string :authors
-      t.integer :downloads
+      t.integer :downloads, :default => 0
       t.string :project_uri
       t.string :gem_uri
       t.string :homepage_uri
