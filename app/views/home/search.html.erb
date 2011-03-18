@@ -1,4 +1,33 @@
 <div id="search_results">
     <h3>Search for '<%= params[:query] %>'</h3>
-    <%= render :partial => 'gems_list' %>
+    <div id="search">
+        <%= form_tag('/search', :method => :get) do %>
+            <div class="text_field">
+                <%= text_field_tag :query %>
+            </div>
+            <div class="button_field">
+                <%= submit_tag "Search" %>
+            </div>
+            <div class="clear"></div>
+        <% end %>
+    </div>
+
+    <div id="browse">
+        <ul class="gems_list">
+            <% @gem_items.each do |gem_item| %>
+                <li>
+                  <span class="gem_name"><%= link_to gem_item.name, gem_item_path(gem_item) %></span>  
+                  <span class="gem_ver">(<%= gem_item.version %>)</span>
+                  <% if current_user && current_user.subscribed?(gem_item) %>
+                    <a href="#" class="unsub_btn" rel="<%= gem_item.id %>">Unsubscribe</a>
+                    <span class="unsubscribing">Subscribing...</span>
+                  <% else %>
+                    <a href="#" class="sub_btn" rel="<%= gem_item.id %>">Subscribe</a>
+                    <span class="subscribing">Subscribing...</span>
+                  <% end %>
+                </li>
+            <% end %>
+        </ul>
+        <%= paginate @gem_items %>
+    </div>
 </div>

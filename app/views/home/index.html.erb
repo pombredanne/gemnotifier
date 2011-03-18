@@ -17,4 +17,20 @@
         <div class="clear"></div>
     <% end %>
 </div>
-<%= render :partial => 'gems_list' %>
+<div>
+    <div class="most_updated_gems">
+        <ul>
+            <% for gem_item in @most_updated_gems %>
+                <li><%= link_to gem_item.name, gem_item_path(gem_item) %> (<%= gem_item.version %>)</li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="most_subscribed_gems">
+        <ul>
+            <% for gem_item in @most_subscribed_gems %>
+                <li><%= link_to gem_item.name, gem_item_path(gem_item) %> (<%= gem_item.version %>) (<%= gem_item.subscribed_count %> subscribes)</li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>

@@ -1,10 +1,14 @@
 Gemnotifier::Application.routes.draw do
 
+  get "gems/:id", :to => "gem_items#show", :as => :gem_item
+  get "browse", :to => "home#browse", :as => :browse
+  
   post "subscribe", :to => "subscribe#create"
   post "unsubscribe", :to => "subscribe#destroy"
 
   root :to => "home#index"
   
+  match 'mygems', :to => "subscribe#index"
   match 'search', :to => "home#search"
   match '/auth/:provider/callback', :to => 'sessions#create'
   match 'sign_out', :to => 'sessions#destroy'

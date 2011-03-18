@@ -66,12 +66,15 @@ body {
 #head .wraper {
   position: relative;
 }
-#head #user_info {
+#head #signedin_box {
   position: absolute;
   right: 0px;
   top: 0px;
 }
-#head #user_info span {
+#head #signedin_box a {
+  margin-left: 10px;
+}
+#head #signedin_box span {
   margin-right: 10px;
   font-size: 0.9em;
 }
@@ -160,6 +163,37 @@ a.signin {
 #search_results h3 {
   margin: 20px 0;
   font-weight: bold;
+}
+#subscribed_gems {
+  min-height: 500px;
+}
+#subscribed_gems h3 {
+  margin: 20px 0 10px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+div.gem_item {
+  margin: 20px 0;
+  border: 1px solid #eee;
+  padding: 20px 20px;
+}
+div.gem_item .field {
+  margin: 10px 0;
+}
+div.gem_item .field label {
+  font-weight: bold;
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+  margin-right: 20px;
+}
+.most_updated_gems {
+  float: left;
+  width: 50%;
+}
+.most_subscribed_gems {
+  float: right;
+  width: 50%;
 }
 #foot .wraper {
   border-top: 1px solid #ddd;
