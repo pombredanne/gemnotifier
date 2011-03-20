@@ -1,17 +1,27 @@
 <div class="gem_item">
     <div class="field">
-        <label>Name:</label> <span><%= @gem_item.name %></span>
+        <label>Name</label> <span><%= @gem_item.name %></span>
     </div>
     <div class="field">
-        <label>Info:</label><span><%= @gem_item.info %></span>
+        <label>Info</label><span><%= @gem_item.info %></span>
     </div>
     <div class="field">
-        <label>Authors:</label><span><%= @gem_item.authors %></span>
+        <label>Authors</label><span><%= @gem_item.authors %></span>
     </div>
     <div class="field">
-        <label>Version:</label><span><%= @gem_item.version %></span>
+        <label>Version</label><span><%= @gem_item.version %></span>
     </div>
     <div class="field">
-        <label>Downloads of this version:</label><span><%= @gem_item.version_downloads %></span>
+        <label>Downloads of this version</label><span><%= @gem_item.version_downloads %></span>
+    </div>
+    <div class="links">
+        <%= link_to 'Homepage', @gem_item.homepage_uri %> | 
+        <%= link_to 'Project', @gem_item.project_uri %> | 
+        <%= link_to 'Wiki', @gem_item.wiki_uri %> | 
+        <%= link_to 'Documentation', @gem_item.documentation_uri %> | 
+        <%= link_to 'SouceCode', @gem_item.source_code_uri %>
+    </div>
+    <div class="field">
+        <input type='button' id="subscribe_btn" rel="<%= @gem_item.id %>" value="Subscribe"></input>
     </div>
 </div>

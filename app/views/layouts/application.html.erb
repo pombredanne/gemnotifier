@@ -9,12 +9,13 @@
 
     <div id="head">
         <div class="wraper">
-            <h1><a href="/">GemNotifier</a></h1>
-            <% if current_user %>
+            <a href="/" id="logo">GemNotifier</a>
             <div id="signedin_box">
-                <a href="/browse">Browse</a><a href="/mygems">My Gems</a><a href="/sign_out">Sign Out</a>
+                <a href="/browse">Browse</a>
+                <% if current_user %>
+                    <a href="/mygems">My Gems</a><a href="/sign_out">SignOut</a>
+                <% end %>
             </div>
-            <% end %>
         </div>
     </div>
     <div id="content">
