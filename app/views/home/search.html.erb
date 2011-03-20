@@ -16,7 +16,7 @@
         <ul class="gems_list">
             <% @gem_items.each do |gem_item| %>
                 <li>
-                  <span class="gem_name"><%= link_to gem_item.name, gem_item_path(gem_item) %></span>  
+                  <span class="gem_name"><%= link_to gem_item.name, gem_item_path(:id => gem_item.name) %></span>  
                   <span class="gem_ver">(<%= gem_item.version %>)</span>
                   <p><%= truncate gem_item.info, :length => 80 %></p>
                   
