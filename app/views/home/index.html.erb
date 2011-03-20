@@ -1,12 +1,11 @@
 <div id="intro">
-    <h2>Welcome to GemNotifier</h2>
-    <p>Subscribe gems for upgrade notifications.</p>
+    <h2>Welcome to GemNotifier!</h2>
+    <p>Subscribe gems your want to be notified when the gems have new versions.</p>
     <% if current_user.nil? %>
         <a href="/auth/github" class="signin">Sign In With Github</a>
     <% end %>
 </div>
 <div id="search">
-    <h3>Search Gems</h3>
     <%= form_tag('/search', :method => :get) do %>
         <div class="text_field">
             <%= text_field_tag :query %>
@@ -19,6 +18,7 @@
 </div>
 <div>
     <div class="most_updated_gems">
+        <h3>Latest Updated Gems</h3>
         <ul>
             <% for gem_item in @most_updated_gems %>
                 <li><%= link_to gem_item.name, gem_item_path(gem_item) %> (<%= gem_item.version %>)</li>
@@ -26,9 +26,10 @@
         </ul>
     </div>
     <div class="most_subscribed_gems">
+        <h3>Most Subscribed Gems</h3>
         <ul>
             <% for gem_item in @most_subscribed_gems %>
-                <li><%= link_to gem_item.name, gem_item_path(gem_item) %> (<%= gem_item.version %>) (<%= gem_item.subscribed_count %> subscribes)</li>
+                <li><%= link_to gem_item.name, gem_item_path(gem_item) %> (<%= gem_item.version %>)</li>
             <% end %>
         </ul>
     </div>

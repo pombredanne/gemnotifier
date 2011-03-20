@@ -12,10 +12,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 :focus {
     outline: 0 none;
 }
-body {
-    background: none repeat scroll 0 0 white;
-    color: #2F3536;
-    line-height: 1;
+html {
+  height: 100%;
 }
 ol, ul {
     list-style: none outside none;
@@ -37,31 +35,36 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 a:hover {
-    background: none repeat scroll 0 0 #DFE7E8;
-    text-decoration: none;
+    text-decoration: ;
 }
 .wraper {
-  width: 780px;
+  width: 700px;
   margin: 0 auto;
 }
 .clear {
   clear: both;
 }
 html {
-    height: 100%;
 }
 body {
-    background: none repeat scroll 0 0 white;
     color: #2F3536;
     font-family: Verdana,Arial,Sans-Serif;
     font-size: 12px;
-    height: 100%;
     line-height: 165%;
-    margin: 0 auto;
+    background:  #dcecf7;
+    min-height: 100%;
+}
+#logo {
+  background: url(/images/logo.png) no-repeat;
+  display: block;
+  width: 192px;
+  height: 42px;
+  text-indent: -1000px;
 }
 #head {
-  padding: 30px 0;
-  background: #ccc;
+  padding: 30px 0 0 0;
+  background: url(/images/head_bg.png) repeat-x ;
+  height: 105px;
 }
 #head .wraper {
   position: relative;
@@ -73,6 +76,11 @@ body {
 }
 #head #signedin_box a {
   margin-left: 10px;
+  color: #175c7d;
+  font-weight: bold;
+}
+#head #signedin_box a:hover {
+  text-decoration: underline;
 }
 #head #signedin_box span {
   margin-right: 10px;
@@ -82,13 +90,19 @@ body {
   font-weight: bold;
   font-size: 1.5em;
 }
+#content {
+}
+ul.gems_list {
+  border: 1px solid #333;
+}
 ul.gems_list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  padding: 10px 10px;
+  border-bottom: 1px solid #666;
   position: relative;
+  background: #f0f0f0;
 }
 ul.gems_list li:hover {
-  background: #f5f5f5;
+  background: #fff;
 }
 ul.gems_list li a.sub_btn, ul.gems_list li a.unsub_btn, ul.gems_list li span.subscribing, ul.gems_list li span.unsubscribing {
   display: none;
@@ -99,28 +113,31 @@ ul.gems_list li a.sub_btn, ul.gems_list li a.unsub_btn, ul.gems_list li span.sub
 ul.gems_list li:hover a.sub_btn, ul.gems_list li:hover a.unsub_btn {
   display: inline-block;
 }
+ul.gems_list li p {
+  font-size: 0.9em;
+}
 #intro {
   padding: 20px 0;
 }
 #intro h2 {
   font-weight: bold;
+  font-size: 1.1em;
 }
 a.signin {
   display: inline-block;
-  border: 1px solid #ddd;
   margin: 10px 0;
-  padding: 5px 20px;
-  -moz-border-radius: 10px;
   font-weight: bold;
+  color: #036c93;
+  text-decoration: underline;
 }
 #search {
-  margin: 20px 0;
+  margin: 0px 0 20px 0;
 }
 #search h3 {
   font-weight: bold;
 }
 #search form {
-  background: #f1f1f1;
+  background: #56a0c3;
   padding: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -131,7 +148,7 @@ a.signin {
 }
 #search form .text_field input[type='text'] {
   width: 518px;
-  border: 1px solid #bbb;
+  border: 1px solid #30708e;
   margin: 0;
   padding: 10px;
   display: block;
@@ -141,10 +158,10 @@ a.signin {
   width: 30%;
 }
 #search form .button_field input[type='submit'] {
-  border: 1px solid #bbb;
+  border: 1px solid #30708e;
   text-align: center;
-  background: #E6E6E6;
-  color: #666;
+  background: #e6e6e6;
+  color: #767676;
   padding: 9px;
   font-weight: bold;
   cursor: pointer;
@@ -175,25 +192,45 @@ a.signin {
 div.gem_item {
   margin: 20px 0;
   border: 1px solid #eee;
-  padding: 20px 20px;
+  background: #fff;
+  padding: 20px 20px 20px 40px;
 }
 div.gem_item .field {
   margin: 10px 0;
 }
 div.gem_item .field label {
   font-weight: bold;
-  display: inline-block;
+  display: block;
   width: 200px;
-  text-align: right;
   margin-right: 20px;
+}
+.most_updated_gems, .most_subscribed_gems {
+  width: 50%;
+  margin-top: 30px;
 }
 .most_updated_gems {
   float: left;
-  width: 50%;
 }
 .most_subscribed_gems {
   float: right;
-  width: 50%;
+}
+.most_updated_gems h3, .most_subscribed_gems h3 {
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+#subscribe_btn, #unsubscribe_btn {
+  display: block;
+  padding: 5px 10px;
+  background: #1a6184;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 #foot .wraper {
   border-top: 1px solid #ddd;
