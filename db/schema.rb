@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(:version => 20110318134043) do
 
   create_table "gem_items", :force => true do |t|
     t.string   "name"
-    t.text     "info",              :limit => 255
+    t.text     "info"
     t.string   "version"
-    t.integer  "version_downloads"
-    t.text     "authors",           :limit => 255
-    t.integer  "downloads"
+    t.integer  "version_downloads", :default => 0
+    t.text     "authors"
+    t.integer  "downloads",         :default => 0
     t.string   "project_uri"
     t.string   "gem_uri"
     t.string   "homepage_uri"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20110318134043) do
     t.text     "dependencies"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "subscribed_count",                 :default => 0
+    t.integer  "subscribed_count",  :default => 0
   end
 
   create_table "notifications", :force => true do |t|
