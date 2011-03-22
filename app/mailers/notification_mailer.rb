@@ -1,5 +1,5 @@
 class NotificationMailer < ActionMailer::Base
-  default :from => "noreply@gemnotifier.org"
+  default :from => "admin@intridea.com"
   
   def upgrades(user, notifications)
     @user = user
