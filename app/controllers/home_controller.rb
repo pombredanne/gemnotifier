@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   
   def browse
     params[:order] ||= 'name'
-    @gem_items = GemItem.order(params[:order]).page params[:page]
+    @gem_items = GemItem.order("#{params[:order]} desc").page params[:page]
   end
   
 end
