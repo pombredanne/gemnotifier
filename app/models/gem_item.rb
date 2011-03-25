@@ -9,11 +9,11 @@ class GemItem < ActiveRecord::Base
   end
   
   def self.most_updated_gems
-    GemItem.order('updated_at desc').limit(5)
+    GemItem.order('updated_at desc').limit(10)
   end
   
   def self.most_subscribed_gems
-    GemItem.order('subscribed_count desc').limit(5)
+    GemItem.order('subscribed_count desc').limit(10)
   end
   
   def to_param

@@ -12,11 +12,21 @@
 </div>
 
 <div id="browse">
+    <div id="sort">
+        <p>
+            <span>Sort By:</span>
+            <%= link_to 'Downloads', browse_path(:order => 'downloads') %>, 
+            <%= link_to 'Name', browse_path(:order => 'name') %>,
+            <%= link_to 'Subscribes', browse_path(:order => 'subscribed_count') %>,
+            <%= link_to 'Latest', browse_path(:order => 'updated_at') %>
+        </p>
+    </div>
     <ul class="gems_list">
         <% @gem_items.each do |gem_item| %>
             <li>
               <span class="gem_name"><%= link_to gem_item.name, gem_item_path(gem_item) %></span>  
               <span class="gem_ver">(<%= gem_item.version %>)</span>
+              <p><%= truncate gem_item.info, :length => 80 %></p>
               <% if current_user && current_user.subscribed?(gem_item) %>
                 <a href="#" class="unsub_btn" rel="<%= gem_item.id %>">Unsubscribe</a>
                 <span class="unsubscribing">Subscribing...</span>
