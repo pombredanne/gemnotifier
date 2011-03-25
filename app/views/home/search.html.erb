@@ -13,6 +13,16 @@
     </div>
 
     <div id="browse">
+        <div id="sort">
+            <p>
+                <span>Sort By:</span>
+                <%= link_to 'Downloads', search_path({:order => 'downloads', :query => params[:query]}) %>, 
+                <%= link_to 'Name', search_path({:order => 'name', :query => params[:query]}) %>,
+                <%= link_to 'Subscribes', search_path({:order => 'subscribed_count', :query => params[:query]}) %>,
+                <%= link_to 'Latest', search_path(:order => 'updated_at') %>
+            </p>
+        </div>
+        
         <ul class="gems_list">
             <% @gem_items.each do |gem_item| %>
                 <li>

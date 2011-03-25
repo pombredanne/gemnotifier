@@ -232,6 +232,9 @@ div.gem_item .field label {
   border: none;
   cursor: pointer;
 }
+#sort {
+  margin: 20px 0 15px 0;
+}
 #foot .wraper {
   border-top: 1px solid #ddd;
   padding: 40px 0;

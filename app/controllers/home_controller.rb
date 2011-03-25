@@ -5,11 +5,13 @@ class HomeController < ApplicationController
   end
 
   def search
-    @gem_items = GemItem.where("name like '%#{params[:query]}%'").page params[:page]
+    params[:order] ||= 'name'
+    @gem_items = GemItem.where(["name like :name", {:name => "%#{params[:query]}%"}]).order(params[:order]).page params[:page]
   end
   
   def browse
-    @gem_items = GemItem.order(:name).page params[:page]
+    params[:order] ||= 'name'
+    @gem_items = GemItem.order(params[:order]).page params[:page]
   end
   
 end
