@@ -1,15 +1,11 @@
-<h1>Hello <%= @user.name %></h1>
+Hello <%= @user.name %>
 
-<p>Here is gems that got upgraded this week:</p>
+Here is gems that got upgraded this week:
 
-<ul>
     <% @notifications.each do |notification| %>
-        <li>
             <%= link_to notification.gem_item.name, url_for(:controller => 'gem_items', :action => 'show', :id => notification.gem_item.name, :host => 'gemnotifier.org') %> (<%= notification.version %>)
-        </li>
     <% end %>
-</ul>
 
 
 Thanks
-Gemnotifier.org
+Gemnotifier.org ( Brought to you by intridea.com)
