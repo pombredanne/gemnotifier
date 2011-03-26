@@ -9,12 +9,11 @@ class Subscribe < ActiveRecord::Base
   protected
     
     def increase_subscribed_count
-      self.gem_item.update_attribute(:subscribed_count, self.gem_item.subscribed_count + 1)
-      GemItem.update(self.gem_item_id, :subscribed_count => (self.gem_item.subscribed_count + 1))
+      GemItem.update_all("subscribed_count = #{self.gem_item.subscribed_count + 1}", :id => self.gem_item_id)
     end
     
     def decrease_subscribed_count
-      GemItem.update(self.gem_item_id, :subscribed_count => (self.gem_item.subscribed_count - 1))
+      GemItem.update_all("subscribed_count = #{self.gem_item.subscribed_count - 1}", :id => self.gem_item_id)
     end
     
 end
