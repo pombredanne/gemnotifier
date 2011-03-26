@@ -3,7 +3,7 @@ Hello <%= @user.name %>
 Here is gems that got upgraded this week:
 
     <% @notifications.each do |notification| %>
-            <%= link_to notification.gem_item.name, url_for(:controller => 'gem_items', :action => 'show', :id => notification.gem_item.name, :host => 'gemnotifier.org') %> (<%= notification.version %>)
+            <%= notification.gem_item.name %> <%=  url_for(:controller => 'gem_items', :action => 'show', :id => notification.gem_item.name, :host => 'gemnotifier.org') %> (<%= notification.version %>)
     <% end %>
 
 
