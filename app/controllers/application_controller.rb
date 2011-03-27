@@ -20,7 +20,9 @@ class ApplicationController < ActionController::Base
     end
     
     def logged_in?
-      current_user.present?
+      unless current_user.present?
+        redirect_to '/'
+      end
     end
     
 end
