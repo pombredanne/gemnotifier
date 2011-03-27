@@ -17,6 +17,7 @@ $(function(){
          gem_ele.replaceWith(response);
        }
      });
+     return false;
   });
   
   $("a.unsub_btn").live('click', function(){
@@ -36,6 +37,7 @@ $(function(){
          gem_ele.replaceWith(response);
        }
      });
+     return false;
   });
   
   $("#subscribe_btn").live('click', function(){
@@ -57,6 +59,7 @@ $(function(){
         ele.val('Unsubscribe');
       }
     });
+    return false;
   });
   
   $("#unsubscribe_btn").live('click', function(){
@@ -78,6 +81,7 @@ $(function(){
         ele.val('Subscribe');
       }
     });
+    return false;
   });
   
 });
