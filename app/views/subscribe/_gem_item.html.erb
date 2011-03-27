@@ -1,5 +1,5 @@
 <li>
-  <span class="gem_name"><%= gem_item.name %></span>  
+  <span class="gem_name"><%= link_to gem_item.name, gem_item_path(gem_item) %></span>  
   <span class="gem_ver">(<%= gem_item.version %>)</span>
   <p><%= truncate gem_item.info, :length => 80 %></p>
   <a href="#" class="unsub_btn" rel="<%= gem_item.id %>">Unsubscribe</a>
