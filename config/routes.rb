@@ -1,6 +1,7 @@
 Gemnotifier::Application.routes.draw do
 
-  get "gems/:id", :to => "gem_items#show", :as => :gem_item
+  get "gems/:id", :to => "gem_items#show", :as => :gem_item, :id => /.*/
+  
   get "browse", :to => "home#browse", :as => :browse
   
   post "subscribe", :to => "subscribe#create"
