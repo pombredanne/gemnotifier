@@ -1,5 +1,5 @@
 <div id="subscribed_gems">
-    <h3>My Subscribed Gems</h3>
+    <h3>My Subscribed Gems. ( Updates will be send to <%= current_user.email %>)</h3>
     <ul class="gems_list">
         <% for gem_item in @gem_items %>
             <%= render :partial => 'gem_item', :locals => { :gem_item => gem_item } %>
