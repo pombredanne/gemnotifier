@@ -17,7 +17,7 @@ class Authorization < ActiveRecord::Base
     Authorization.create({
       :provider => auth['provider'],
       :uid => auth['uid'],
-      :user_id => user
+      :user_id => user.id
     })
   end
   
