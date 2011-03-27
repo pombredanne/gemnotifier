@@ -237,6 +237,16 @@ div.gem_item .field label {
 #sort {
   margin: 20px 0 15px 0;
 }
+div.links {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+  margin: 20px 0;
+  font-size: 0.9em;
+}
+div.links a {
+  margin-right: 10px;
+}
 #foot .wraper {
   border-top: 1px solid #ddd;
   padding: 20px 0;
