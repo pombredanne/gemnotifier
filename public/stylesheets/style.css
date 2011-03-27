@@ -51,7 +51,7 @@ body {
     font-family: Verdana,Arial,Sans-Serif;
     font-size: 12px;
     line-height: 165%;
-    background:  #dcecf7;
+    background:  #f0f8fb;
     min-height: 100%;
 }
 #logo {
@@ -73,11 +73,13 @@ body {
   position: absolute;
   right: 0px;
   top: 0px;
+  margin-top: 10px;
 }
 #head #signedin_box a {
   margin-left: 10px;
   color: #175c7d;
   font-weight: bold;
+  text-shadow: 0 1px 0 #55aad2;
 }
 #head #signedin_box a:hover {
   text-decoration: underline;
@@ -237,6 +239,11 @@ div.gem_item .field label {
 }
 #foot .wraper {
   border-top: 1px solid #ddd;
-  padding: 40px 0;
+  padding: 20px 0;
   margin-top: 50px;
+  font-size: 0.9em;
+}
+#foot a {
+  color: #2b6790;
+  font-weight: bold;
 }
