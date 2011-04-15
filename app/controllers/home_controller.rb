@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def search
-    params[:order] ||= 'name'
+    params[:order] ||= 'download desc'
     @gem_items = GemItem.search(params[:query]).order(params[:order]).page params[:page]
   end
   
