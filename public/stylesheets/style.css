@@ -55,7 +55,7 @@ body {
     min-height: 100%;
 }
 #logo {
-  background: url(/images/logo.png) no-repeat;
+  background: url(/images/gemnotifier_logo.png) no-repeat;
   display: block;
   width: 192px;
   height: 42px;
@@ -252,6 +252,12 @@ div.links a {
   padding: 20px 0;
   margin-top: 50px;
   font-size: 0.9em;
+}
+#foot p {
+  float: left;
+}
+#foot a#incubator {
+  float: right;
 }
 #foot a {
   color: #2b6790;
