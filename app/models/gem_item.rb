@@ -1,4 +1,8 @@
 class GemItem < ActiveRecord::Base
+
+  index do
+    name
+  end
   
   serialize :dependencies
   

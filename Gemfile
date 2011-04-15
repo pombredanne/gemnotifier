@@ -14,6 +14,8 @@ gem 'jquery-rails', '>= 0.2.6'
 
 gem 'sqlite3'
 
+gem 'texticle'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
