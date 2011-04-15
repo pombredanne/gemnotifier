@@ -1,0 +1,22 @@
+<p>
+    Hello <b><%= @user.name %></b>
+</p>
+<div>
+    <h2>Here is gems that got upgraded this week:</h2>
+    <ul>
+        <% @notifications.each do |notification| %>
+            <li>
+                <%= link_to notification.gem_item.name,  url_for(:controller => 'gem_items', :action => 'show', :id => notification.gem_item.name, :host => 'gemnotifier.org') %> (<%= notification.version %>)
+            </li>
+        <% end %>
+        
+    </ul>
+</div>
+
+
+
+<p>
+    <a href="http://gemnotifier.org">Gemnotifier</a> <span>( Brought to you by <a href="http://intridea.com">intridea.com</a>)</span>
+    <br/>
+    <a href="http://intridea.com"><img src="http://gemnotifier.org/images/gemnotifier_incubator.png"/></a>
+</p>
