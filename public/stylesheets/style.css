@@ -65,6 +65,7 @@ body {
   padding: 30px 0 0 0;
   background: url(/images/head_bg.png) repeat-x ;
   height: 105px;
+  position: relative;
 }
 #head .wraper {
   position: relative;
