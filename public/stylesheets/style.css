@@ -92,6 +92,10 @@ body {
   font-weight: bold;
   font-size: 1.5em;
 }
+#head #intridea_peel {
+  top: 0;
+  right: 0;
+}
 #content {
 }
 ul.gems_list {
