@@ -208,6 +208,9 @@ div.gem_item {
   border: 1px solid #eee;
   background: #fff;
   padding: 20px 20px 20px 40px;
+  box-shadow: 0px 5px 5px #888;
+  -webkit-box-shadow: 0px 5px 5px #888;
+  -moz-box-shadow: 0px 5px 5px #888;
 }
 div.gem_item .field {
   margin: 10px 0;
