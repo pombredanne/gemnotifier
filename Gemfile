@@ -16,6 +16,8 @@ gem 'sqlite3'
 
 gem 'texticle'
 
+gem 'exception_notification_rails3', :require => 'exception_notifier'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
