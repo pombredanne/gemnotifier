@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   def subscribe_gems(gems)
     gem_items = GemItem.where(:name => gems)
     gem_items.each do |gem_item|
-      unless user.subscribed?(gem_item)
+      unless self.subscribed?(gem_item)
         Subscribe.create({:gem_item => gem_item, :user => self})
       end
     end
