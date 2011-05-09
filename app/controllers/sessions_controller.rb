@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     unless @auth = Authorization.from_auth(auth)
       @auth = Authorization.create_from_auth(auth)
     end
+    flash[:notice] = "Successfully sign in from github!"
     self.current_user = @auth.user
     redirect_to '/'
   end
