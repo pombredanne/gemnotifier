@@ -21,6 +21,16 @@
     </div>
     <div id="content">
         <div class="wraper">
+            <% if flash[:notice] || flash[:error] %>
+                <div id="flash">
+                    <% if flash[:notice] %>
+                        <p class="notice"><%= flash[:notice] %></p>
+                    <% end %>
+                    <% if flash[:error] %>
+                        <p class="error"><%= flash[:error] %></p>
+                    <% end %>
+                </div>
+            <% end %>
             <%= yield %>
         </div>
     </div>

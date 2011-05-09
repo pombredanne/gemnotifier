@@ -1,0 +1,16 @@
+<div id="select_gems">
+    <%= form_tag("/subscribe_gems", :method => :post) do %>
+        <ul class="gems">
+            <% @gems_to_subscribe.each do |gem_item| %>
+                <li>
+                    <%= check_box_tag 'gems[]', gem_item[:name], true %>
+                    <span><%= gem_item[:name] %> (<%= gem_item[:version] %>)</span>
+                </li>
+            <% end %>
+        </ul>
+        <p>
+            <%= submit_tag "Subscribe Gems", :class => 'submit_btn' %>
+            <%= link_to 'Back', '/select_gems' %>
+        </p>
+    <% end %>
+</div>

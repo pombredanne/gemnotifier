@@ -4,6 +4,7 @@
     <% if current_user.nil? %>
         <a href="/auth/github" class="signin">Sign In With Github</a>
     <% end %>
+    <a href="/with_gemfile" class="gemfile">Subscribe with Gemfile</a>
 </div>
 <div id="search">
     <%= form_tag('/search', :method => :get) do %>
