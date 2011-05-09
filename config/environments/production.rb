@@ -55,4 +55,10 @@ Gemnotifier::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  config.middleware.use ExceptionNotifier,
+  :email_prefix => "[GemNotifier] Exception",
+  :sender_address => %{"notifier" <admin@intridea.com>},
+  :exception_recipients => %w{roc@intridea.com}
+    
 end
