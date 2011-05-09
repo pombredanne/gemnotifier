@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
     
     def logged_in?
       unless current_user.present?
+        flash[:error] = "You need to signin with github to continue!"
         redirect_to '/'
       end
     end

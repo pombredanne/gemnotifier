@@ -1,0 +1,15 @@
+<div id="with_gemfile">
+    <%= form_tag('/select_gems', :method => :post, :multipart => true) do %>
+        <div class="field">
+            <%= label_tag 'Select Gemfile to subscribe:' %>
+            <%= file_field_tag 'gemfile' %>
+        </div>
+        <div class="field">
+            <%= label_tag "Or: Paste Gemfile content" %>
+            <%= text_area_tag 'gemfile_content', params[:gemfile_content], :size => '60x10' %>
+        </div>
+        <div class="field">
+            <%= submit_tag "Submit", :class => 'submit_btn' %>
+        </div>
+    <% end %>
+</div>

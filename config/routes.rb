@@ -9,6 +9,10 @@ Gemnotifier::Application.routes.draw do
 
   root :to => "home#index"
   
+  match 'with_gemfile', :to => "subscribe#with_gemfile"
+  match 'select_gems', :to => 'subscribe#select_gems'
+  match "subscribe_gems", :to => 'subscribe#subscribe_gems'
+  
   match 'mygems', :to => "subscribe#index"
   match 'search', :to => "home#search"
   match '/auth/:provider/callback', :to => 'sessions#create'
