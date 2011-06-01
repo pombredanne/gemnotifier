@@ -40,4 +40,6 @@ gem 'ruby-debug'
 group :development, :test do
   gem 'rspec'
   gem "rspec-rails"
+  gem 'shoulda'
+  gem "factory_girl_rails"
 end
