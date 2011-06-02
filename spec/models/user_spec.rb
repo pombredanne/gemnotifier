@@ -56,7 +56,7 @@ describe User do
     
     it "should subscribe all specify gems" do
       @user.subscribed?(@gem_item).should be_false
-      @user.subscribe_gems([@gem_item])
+      @user.subscribe_gems([@gem_item.name])
       @user.subscribed?(@gem_item).should be_true
     end
     
