@@ -19,3 +19,9 @@ Factory.define :notification do |notification|
   notification.sequence(:version ) { |n| "1.0.#{n}" }
   notification.upgraded_at Time.now
 end
+
+Factory.define :authorization do |authorization|
+  authorization.provider 'github'
+  authorization.association(:user)
+  authorization.uid '1234'
+end
