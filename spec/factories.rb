@@ -23,5 +23,5 @@ end
 Factory.define :authorization do |authorization|
   authorization.provider 'github'
   authorization.association(:user)
-  authorization.uid '1234'
+  authorization.sequence(:uid) { |n| "1234#{n}"}
 end

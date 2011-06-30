@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  
   def index
     @most_updated_gems = GemItem.most_updated_gems
     @most_subscribed_gems = GemItem.most_subscribed_gems

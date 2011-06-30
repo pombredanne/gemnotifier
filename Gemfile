@@ -38,8 +38,8 @@ gem 'ruby-debug'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'rspec'
-  gem "rspec-rails"
+  gem 'rspec', '>=2.6.0'
+  gem "rspec-rails", '>=2.6.1'
   gem 'shoulda'
   gem "factory_girl_rails"
 end
