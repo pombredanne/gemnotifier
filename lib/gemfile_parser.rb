@@ -42,9 +42,12 @@ class GemfileParser
   
   def parse_with_gemfile_string(gemfile_string)
     gem_strings = gemfile_string.grep(/^\s*gem\b/).collect { |_gem| _gem }
+    raise unless SyntaxChecker.check(gem_strings).valid?
     gem_strings.each do |gem_string|
       instance_eval gem_string
     end
+  rescue
+    @errors << "Error in syntax of Gemfile"
   end
   
   def gem(name, *args)
