@@ -42,4 +42,5 @@ group :development, :test do
   gem "rspec-rails", '>=2.6.1'
   gem 'shoulda'
   gem "factory_girl_rails"
+  gem "rcov"
 end

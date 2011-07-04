@@ -122,6 +122,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rcov (0.9.9)
     rest-client (1.6.1)
       mime-types (>= 1.16)
     rspec (2.6.0)
@@ -165,6 +166,7 @@ DEPENDENCIES
   omniauth
   pg
   rails (= 3.0.5)
+  rcov
   rspec (>= 2.6.0)
   rspec-rails (>= 2.6.1)
   ruby-debug
