@@ -38,10 +38,10 @@ Gemnotifier::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => 'mail.example.com',
+    :address => 'mail.authsmtp.com',
     :port => 25,
-    :user_name => 'username',
-    :password => 'password',
+    :user_name => 'ac41617',
+    :password => 'bcxu5yzyr',
     :authentication => :plain
   }
   config.action_mailer.default_url_options = {:host => "gemnotifier.org"}

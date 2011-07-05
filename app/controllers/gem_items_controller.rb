@@ -1,5 +1,5 @@
 class GemItemsController < ApplicationController
-  
+
   def show
     @gem_item = GemItem.where(:name => params[:id]).first
     if @gem_item.nil?
