@@ -5,7 +5,7 @@ gem 'httparty'
 
 gem 'kaminari'
 
-gem 'omniauth'
+gem 'omniauth', '>=0.2.6'
 
 gem 'jquery-rails', '>= 0.2.6'
   
