@@ -29,25 +29,21 @@ class GemfileParser
     return if @gemfile_file.nil?
     gemfile_string = @gemfile_file.read
     parse_with_gemfile_string(gemfile_string)
-  rescue
-    @errors << "Can't parse the Gemfile"
   end
   
   def parse_with_gemfile_content
     return if @gemfile_content.nil?
     parse_with_gemfile_string(@gemfile_content)
-  rescue
-    @errors << "Can't parse the Gemfile"
   end
   
   def parse_with_gemfile_string(gemfile_string)
     gem_strings = gemfile_string.grep(/^\s*gem\b/).collect { |_gem| _gem }
-    raise unless SyntaxChecker.check(gem_strings).valid?
+    raise "Error in syntax of Gemfile" unless SyntaxChecker.check(gemfile_string).valid?
     gem_strings.each do |gem_string|
       instance_eval gem_string
     end
   rescue
-    @errors << "Error in syntax of Gemfile"
+    @errors << "There's syntax error in gemfile"
   end
   
   def gem(name, *args)

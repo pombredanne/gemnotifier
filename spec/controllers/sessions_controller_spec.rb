@@ -9,18 +9,47 @@ describe SessionsController do
   
   describe "POST create" do
     
-    before(:each) do
-      request.env['rack.auth'] = {
-        'provider' => 'github',
-        'uid' => @auth.uid
-      }
+    context "exist user" do
+      
+      before(:each) do
+        request.env['rack.auth'] = {
+          'provider' => 'github',
+          'uid' => @auth.uid
+        }
+      end
+
+      it "should login user in" do
+        get :create, :provider => 'github'
+        response.should redirect_to('/')
+        assigns[:auth].should == @auth
+        session[:user_id].should == @user.id
+      end
+      
     end
     
-    it "should login user in" do
-      get :create, :provider => 'github'
-      response.should redirect_to('/')
-      assigns[:auth].should == @auth
-      session[:user_id].should == @user.id
+    context "new user" do
+      
+      before(:each) do
+        request.env['rack.auth'] = {
+          'provider' => 'github',
+          'uid' => 321123,
+          'user_info' => {
+            'name' => 'foo',
+            'email' => 'test@foo.com',
+            'nickname' => 'foofoo'
+          }
+        }
+      end
+      
+      it "should create new auth, user and log user in" do
+        get :create, :provider => 'github'
+        response.should redirect_to('/')
+        new_auth = Authorization.last
+        new_user = User.last
+        assigns[:auth].should == new_auth
+        session[:user_id].should == new_user.id
+      end
+      
     end
     
   end

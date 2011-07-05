@@ -9,7 +9,7 @@
 <div id="search">
     <%= form_tag('/search', :method => :get) do %>
         <div class="text_field">
-            <%= text_field_tag :query %>
+            <%= text_field_tag :query, nil, :placeholder => 'example: rails' %>
         </div>
         <div class="button_field">
             <%= submit_tag "Search" %>

@@ -35,7 +35,7 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: ;
+    text-decoration: underline;
 }
 .wraper {
   width: 700px;
@@ -167,6 +167,9 @@ a.signin {
   padding: 9px 10px;
   display: block;
 }
+#search form .text_field input[type='text']:focus {
+  box-shadow:0 0 10px rgba(0,0,0,0.25) inset;
+}
 #search form .button_field {
   float: right;
   width: 30%;
@@ -208,9 +211,13 @@ div.gem_item {
   border: 1px solid #eee;
   background: #fff;
   padding: 20px 20px 20px 40px;
-  box-shadow: 0px 5px 5px #888;
-  -webkit-box-shadow: 0px 5px 5px #888;
-  -moz-box-shadow: 0px 5px 5px #888;
+  box-shadow: 0px 3px 5px #888;
+  -webkit-box-shadow: 0px 3px 5px #888;
+  -moz-box-shadow: 0px 3px 5px #888;
+  border: 1px solid #999;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 div.gem_item .field {
   margin: 10px 0;
@@ -248,6 +255,9 @@ div.gem_item .field label {
   -webkit-border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+#subscribe_btn:hover, #unsubscribe_btn:hover {
+  background-color: #125576;
 }
 #sort {
   margin: 20px 0 15px 0;
