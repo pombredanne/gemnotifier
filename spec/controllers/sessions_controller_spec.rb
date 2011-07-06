@@ -12,7 +12,7 @@ describe SessionsController do
     context "exist user" do
       
       before(:each) do
-        request.env['rack.auth'] = {
+        request.env['omniauth.auth'] = {
           'provider' => 'github',
           'uid' => @auth.uid
         }
@@ -30,7 +30,7 @@ describe SessionsController do
     context "new user" do
       
       before(:each) do
-        request.env['rack.auth'] = {
+        request.env['omniauth.auth'] = {
           'provider' => 'github',
           'uid' => 321123,
           'user_info' => {

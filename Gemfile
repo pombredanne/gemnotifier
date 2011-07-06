@@ -18,6 +18,8 @@ gem 'texticle'
 
 gem 'exception_notification_rails3', :require => 'exception_notifier'
 
+gem "sass"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
