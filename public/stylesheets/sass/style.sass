@@ -1,3 +1,8 @@
+@mixin rounded-corner($radius: 10px)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
   border: 0 none
   font:
@@ -120,9 +125,7 @@ ul.gems_list li a.sub_btn, ul.gems_list li a.unsub_btn, ul.gems_list li span.sub
   background: #ddd
   color: #444
   font-weight: bold
-  border-radius: 5px
-  -webkit-border-radius: 5px
-  -moz-border-radius: 5px
+  @include rounded-corner(5px)
   padding: 2px 5px
   font-size: 9px
 
@@ -158,8 +161,7 @@ a.signin
 #search form
   background: #56a0c3
   padding: 5px
-  -moz-border-radius: 5px
-  -webkit-border-radius: 5px
+  @include rounded-corner(5px)
   box-shadow: 0 1px 2px #aaa
   -webkit-box-shadow: 0 1px 2px #aaa
   -moz-box-shadow: 0 1px 2px #aaa
@@ -222,9 +224,7 @@ div.gem_item
   -moz-box-shadow: 0px 0px 5px #56A0C3
   -webkit-box-shadow: 0px 0px 5px #56A0C3
   border: 1px solid #999
-  border-radius: 5px
-  -webkit-border-radius: 5px
-  -moz-border-radius: 5px
+  @include rounded-corner(5px)
 
 div.gem_item .field
   margin: 10px 0
@@ -258,9 +258,7 @@ div.gem_item .field label
   text-align: center
   margin: 20px 10px 0 0
   font-weight: bold
-  border-radius: 10px
-  -moz-border-radius: 10px
-  -webkit-border-radius: 10px
+  @include rounded-corner(10px)
   border: none
   cursor: pointer
   &:hover
@@ -344,9 +342,7 @@ input.submit_btn
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ccc))
   border: 1px solid #ccc
   border-bottom: 1px solid #bbb
-  -moz-border-radius: 3px
-  -webkit-border-radius: 3px
-  border-radius: 3px
+  @include rounded-corner(3px)
   color: #333
   font:
     family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
@@ -372,4 +368,3 @@ input.submit_btn
     -moz-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee
     -webkit-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee
     box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee
-    
