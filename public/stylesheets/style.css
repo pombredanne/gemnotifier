@@ -101,28 +101,41 @@ body {
 #content {
 }
 ul.gems_list {
-  border: 1px solid #333;
-  box-shadow: 0px 5px 10px #888;
-  -moz-box-shadow: 0px 5px 10px #888;
-  -webkit-box-shadow: 0px 5px 10px #888;
+  border: 1px solid #777;
+  box-shadow: 0px 2px 5px #56A0C3;
+  -moz-box-shadow: 0px 2px 5px #56A0C3;
+  -webkit-box-shadow: 0px 2px 5px #56A0C3;
 }
 ul.gems_list li {
   padding: 10px 10px;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #ccc;
   position: relative;
-  background: #f0f0f0;
+  background: #fff;
 }
 ul.gems_list li:hover {
-  background: #fff;
+  background: #E8F4F8;
+  box-shadow:0 0 3px rgba(0,0,0,0.25) inset;
 }
 ul.gems_list li a.sub_btn, ul.gems_list li a.unsub_btn, ul.gems_list li span.subscribing, ul.gems_list li span.unsubscribing {
   display: none;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
+  background: #ddd;
+  color: #444;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 9px;
 }
 ul.gems_list li:hover a.sub_btn, ul.gems_list li:hover a.unsub_btn {
   display: inline-block;
+  text-decoration: none;
+}
+ul.gems_list li a.sub_btn:hover, ul.gems_list li a.unsub_btn:hover {
+  background: #ccc;
 }
 ul.gems_list li p {
   font-size: 0.9em;
@@ -166,9 +179,11 @@ a.signin {
   margin: 0;
   padding: 9px 10px;
   display: block;
+  background: #f9f9f9;
 }
 #search form .text_field input[type='text']:focus {
   box-shadow:0 0 10px rgba(0,0,0,0.25) inset;
+  background: #fff;
 }
 #search form .button_field {
   float: right;
@@ -211,9 +226,9 @@ div.gem_item {
   border: 1px solid #eee;
   background: #fff;
   padding: 20px 20px 20px 40px;
-  box-shadow: 0px 3px 5px #888;
-  -webkit-box-shadow: 0px 3px 5px #888;
-  -moz-box-shadow: 0px 3px 5px #888;
+  box-shadow: 0px 0px 5px #56A0C3;
+  -moz-box-shadow: 0px 0px 5px #56A0C3;
+  -webkit-box-shadow: 0px 0px 5px #56A0C3;
   border: 1px solid #999;
   border-radius: 5px;
   -webkit-border-radius: 5px;
