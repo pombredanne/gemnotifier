@@ -1,194 +1,185 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    border: 0 none;
-    font-family: inherit;
-    font-size: 100%;
-    font-style: inherit;
-    font-weight: inherit;
-    margin: 0;
-    outline: 0 none;
-    padding: 0;
-    vertical-align: baseline;
-}
+  border: 0 none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  vertical-align: baseline; }
+
 :focus {
-    outline: 0 none;
-}
+  outline: 0 none; }
+
 html {
-  height: 100%;
-}
+  height: 100%; }
+
 ol, ul {
-    list-style: none outside none;
-    margin-bottom: 1em;
-}
+  list-style: none outside none;
+  margin-bottom: 1em; }
+
 table {
-    border-collapse: separate;
-    border-spacing: 0;
-}
+  border-collapse: separate;
+  border-spacing: 0; }
+
 caption, th, td {
-    font-weight: normal;
-    text-align: left;
-}
+  font-weight: normal;
+  text-align: left; }
+
 strong {
-    font-weight: bold;
-}
+  font-weight: bold; }
+
 a:link, a:visited, a:active {
-    color: #EF4300;
-    text-decoration: none;
-}
+  color: #ef4300;
+  text-decoration: none; }
+
 a:hover {
-    text-decoration: underline;
-}
+  text-decoration: underline; }
+
 .wraper {
   width: 700px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+
 .clear {
-  clear: both;
-}
-html {
-}
+  clear: both; }
+
 body {
-    color: #2F3536;
-    font-family: Verdana,Arial,Sans-Serif;
-    font-size: 12px;
-    line-height: 165%;
-    background:  #f0f8fb;
-    min-height: 100%;
-}
+  color: #2f3536;
+  font-family: Verdana, Arial, Sans-Serif;
+  font-size: 12px;
+  line-height: 165%;
+  background: #f0f8fb;
+  min-height: 100%; }
+
 #logo {
   background: url(/images/gemnotifier_logo.png) no-repeat;
   display: block;
   width: 192px;
   height: 42px;
-  text-indent: -1000px;
-}
+  text-indent: -1000px; }
+
 #head {
   padding: 30px 0 0 0;
-  background: url(/images/head_bg.png) repeat-x ;
+  background: url(/images/head_bg.png) repeat-x;
   height: 105px;
-  position: relative;
-}
+  position: relative; }
+
 #head .wraper {
-  position: relative;
-}
+  position: relative; }
+
 #head #signedin_box {
   position: absolute;
   right: 0px;
   top: 0px;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
+
 #head #signedin_box a {
   margin-left: 10px;
   color: #175c7d;
   font-weight: bold;
-  text-shadow: 0 1px 0 #55aad2;
-}
-#head #signedin_box a:hover {
-  text-decoration: underline;
-}
+  text-shadow: 0 1px 0 #55aad2; }
+  #head #signedin_box a:hover {
+    text-decoration: underline; }
+
 #head #signedin_box span {
   margin-right: 10px;
-  font-size: 0.9em;
-}
+  font-size: 0.9em; }
+
 #head h1 a {
   font-weight: bold;
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
+
 #head #intridea_peel {
   position: absolute;
   top: 0;
-  right: 0;
-}
-#content {
-}
+  right: 0; }
+
 ul.gems_list {
-  border: 1px solid #777;
-  box-shadow: 0px 2px 5px #56A0C3;
-  -moz-box-shadow: 0px 2px 5px #56A0C3;
-  -webkit-box-shadow: 0px 2px 5px #56A0C3;
-}
-ul.gems_list li {
-  padding: 10px 10px;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-  background: #fff;
-}
-ul.gems_list li:hover {
-  background: #E8F4F8;
-  box-shadow:0 0 3px rgba(0,0,0,0.25) inset;
-}
+  border: 1px solid #777777;
+  box-shadow: 0px 2px 5px #56a0c3;
+  -moz-box-shadow: 0px 2px 5px #56a0c3;
+  -webkit-box-shadow: 0px 2px 5px #56a0c3; }
+  ul.gems_list li {
+    padding: 10px 10px;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+    background: white; }
+    ul.gems_list li:hover {
+      background: #e8f4f8;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset; }
+
 ul.gems_list li a.sub_btn, ul.gems_list li a.unsub_btn, ul.gems_list li span.subscribing, ul.gems_list li span.unsubscribing {
   display: none;
   position: absolute;
   top: 20px;
   right: 10px;
-  background: #ddd;
-  color: #444;
+  background: #dddddd;
+  color: #444444;
   font-weight: bold;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   padding: 2px 5px;
-  font-size: 9px;
-}
+  font-size: 9px; }
+
 ul.gems_list li:hover a.sub_btn, ul.gems_list li:hover a.unsub_btn {
   display: inline-block;
-  text-decoration: none;
-}
-ul.gems_list li a.sub_btn:hover, ul.gems_list li a.unsub_btn:hover {
-  background: #ccc;
-}
+  text-decoration: none; }
+  ul.gems_list li:hover a.sub_btn:hover, ul.gems_list li:hover a.unsub_btn:hover {
+    background: #cccccc; }
+
 ul.gems_list li p {
-  font-size: 0.9em;
-}
+  font-size: 0.9em; }
+
 #intro {
-  padding: 20px 0;
-}
+  padding: 20px 0; }
+
 #intro h2 {
   font-weight: bold;
-  font-size: 1.1em;
-}
+  font-size: 1.1em; }
+
 a.signin {
   display: inline-block;
   margin: 10px 0;
   font-weight: bold;
   color: #036c93;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
+
 #search {
-  margin: 0px 0 20px 0;
-}
+  margin: 0px 0 20px 0; }
+
 #search h3 {
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 #search form {
   background: #56a0c3;
   padding: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 0 1px 2px #aaa;
-  -webkit-box-shadow: 0 1px 2px #aaa;
-  -moz-box-shadow: 0 1px 2px #aaa;
-}
+  box-shadow: 0 1px 2px #aaaaaa;
+  -webkit-box-shadow: 0 1px 2px #aaaaaa;
+  -moz-box-shadow: 0 1px 2px #aaaaaa; }
+
 #search form .text_field {
   float: left;
-  width: 70%;
-}
+  width: 70%; }
+
 #search form .text_field input[type='text'] {
   width: 462px;
   border: 1px solid #30708e;
   margin: 0;
   padding: 9px 10px;
   display: block;
-  background: #f9f9f9;
-}
-#search form .text_field input[type='text']:focus {
-  box-shadow:0 0 10px rgba(0,0,0,0.25) inset;
-  background: #fff;
-}
+  background: #f9f9f9; }
+  #search form .text_field input[type='text']:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) inset;
+    background: white; }
+
 #search form .button_field {
   float: right;
-  width: 30%;
-}
+  width: 30%; }
+
 #search form .button_field input[type='submit'] {
   border: 1px solid #30708e;
   text-align: center;
@@ -199,189 +190,181 @@ a.signin {
   cursor: pointer;
   margin: 0;
   text-decoration: none;
-  text-shadow: 0 1px 0 #FFFFFF;
+  text-shadow: 0 1px 0 white;
   display: block;
-  width: 100%;
-}
-#search form .button_field input[type='submit']:hover {
-  background: #8ecc4c;
-  color: #fff;
-  text-shadow: none;
-  
-}
+  width: 100%; }
+  #search form .button_field input[type='submit']:hover {
+    background: #8ecc4c;
+    color: white;
+    text-shadow: none; }
+
 #search_results h3 {
   margin: 20px 0;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 #subscribed_gems {
-  min-height: 500px;
-}
+  min-height: 500px; }
+
 #subscribed_gems h3 {
   margin: 20px 0 10px 0;
   font-size: 1.1em;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 div.gem_item {
   margin: 20px 0;
-  border: 1px solid #eee;
-  background: #fff;
+  border: 1px solid #eeeeee;
+  background: white;
   padding: 20px 20px 20px 40px;
-  box-shadow: 0px 0px 5px #56A0C3;
-  -moz-box-shadow: 0px 0px 5px #56A0C3;
-  -webkit-box-shadow: 0px 0px 5px #56A0C3;
-  border: 1px solid #999;
+  box-shadow: 0px 0px 5px #56a0c3;
+  -moz-box-shadow: 0px 0px 5px #56a0c3;
+  -webkit-box-shadow: 0px 0px 5px #56a0c3;
+  border: 1px solid #999999;
   border-radius: 5px;
   -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-}
+  -moz-border-radius: 5px; }
+
 div.gem_item .field {
-  margin: 10px 0;
-}
+  margin: 10px 0; }
+
 div.gem_item .field label {
   font-weight: bold;
   display: block;
   width: 200px;
-  margin-right: 20px;
-}
+  margin-right: 20px; }
+
 .most_updated_gems, .most_subscribed_gems {
   width: 50%;
-  margin-top: 30px;
-}
+  margin-top: 30px; }
+
 .most_updated_gems {
-  float: left;
-}
+  float: left; }
+
 .most_subscribed_gems {
-  float: right;
-}
+  float: right; }
+
 .most_updated_gems h3, .most_subscribed_gems h3 {
   font-weight: bold;
-  margin: 0 0 15px 0;
-}
+  margin: 0 0 15px 0; }
+
 #subscribe_btn, #unsubscribe_btn {
   display: inline-block;
   padding: 5px 10px;
   background: #1a6184;
-  color: #fff;
+  color: white;
   width: 100px;
   text-align: center;
   margin: 20px 10px 0 0;
   font-weight: bold;
+  border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border: none;
-  cursor: pointer;
-}
-#subscribe_btn:hover, #unsubscribe_btn:hover {
-  background-color: #125576;
-}
+  cursor: pointer; }
+  #subscribe_btn:hover, #unsubscribe_btn:hover {
+    background-color: #125576; }
+
 #sort {
-  margin: 20px 0 15px 0;
-}
+  margin: 20px 0 15px 0; }
+
 div.links {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   padding: 8px 0;
   margin: 20px 0;
-  font-size: 0.9em;
-}
+  font-size: 0.9em; }
+
 div.links a {
-  margin-right: 10px;
-}
-div#with_gemfile form div.field  label {
+  margin-right: 10px; }
+
+div#with_gemfile form div.field label {
   font-weight: bold;
   margin-bottom: 10px;
-  display: block;
-}
+  display: block; }
+
 div#with_gemfile form .field {
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
+
 div#select_gems ul.gems {
-  box-shadow: 0 1px 2px #aaa;
-  -webkit-box-shadow: 0 1px 2px #aaa;
-  -moz-box-shadow: 0 1px 2px #aaa;
-  background: #fff;
-  padding: 10px 15px 20px 15px;
-}
-div#select_gems ul.gems li {
-  padding: 15px 0 0 0px;
-  border-bottom: 1px solid #ccc;
-}
-div#select_gems ul.gems li input[type='checkbox'] {
-  margin-right: 5px;
-}
+  box-shadow: 0 1px 2px #aaaaaa;
+  -webkit-box-shadow: 0 1px 2px #aaaaaa;
+  -moz-box-shadow: 0 1px 2px #aaaaaa;
+  background: white;
+  padding: 10px 15px 20px 15px; }
+  div#select_gems ul.gems li {
+    padding: 15px 0 0 0px;
+    border-bottom: 1px solid #cccccc; }
+    div#select_gems ul.gems li input[type='checkbox'] {
+      margin-right: 5px; }
+
 #flash {
-  margin: 10px 0;
-}
+  margin: 10px 0; }
+
 #flash .notice, #flash .error {
   padding: 5px 5px;
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
+
 #flash .notice {
   border: 2px solid #9fcf9f;
   background: #dfffdf;
-  color: #176f17;
-}
+  color: #176f17; }
+
 #flash .error {
   border: 2px solid #dd0000;
   background: #ffe3e3;
-  color: #961c1c ;
-}
+  color: #961c1c; }
+
 #foot .wraper {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   padding: 20px 0;
   margin-top: 50px;
-  font-size: 0.9em;
-}
+  font-size: 0.9em; }
+
 #foot p {
-  float: left;
-}
+  float: left; }
+
 #foot a#incubator {
-  float: right;
-}
+  float: right; }
+
 #foot a {
   color: #2b6790;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 a.gemfile {
   display: block;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 input.submit_btn {
-  background: #eee;
-  background: -moz-linear-gradient(top, #eee 0%, #ccc 100%);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ccc));
-  border: 1px solid #ccc;
-  border-bottom: 1px solid #bbb;
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eeeeee), to(#cccccc));
+  border: 1px solid #cccccc;
+  border-bottom: 1px solid #bbbbbb;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  color: #333;
+  color: #333333;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: 11px;
   font-weight: bold;
   line-height: 1;
   padding: 8px 0;
   text-align: center;
-  text-shadow: 0 1px 0 #eee;
+  text-shadow: 0 1px 0 #eeeeee;
   width: 150px;
-  margin-right: 10px;
-}
-input.submit_btn:hover {
-  background: #ddd;
-  background: -moz-linear-gradient(top, #ddd 0%, #bbb 100%);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddd), to(#bbb));
-  border: 1px solid #bbb;
-  border-bottom: 1px solid #999;
-  cursor: pointer;
-  text-shadow: 0 1px 0 #ddd;
-}
-
-input.submit_btn:active {
-  border: 1px solid #aaa;
-  border-bottom: 1px solid #888;
-  -moz-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
-  -webkit-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
-  box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
-}
+  margin-right: 10px; }
+  input.submit_btn:hover {
+    background: #dddddd;
+    background: -moz-linear-gradient(top, #dddddd 0%, #bbbbbb 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dddddd), to(#bbbbbb));
+    border: 1px solid #bbbbbb;
+    border-bottom: 1px solid #999999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #dddddd; }
+  input.submit_btn:active {
+    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #888888;
+    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; }
