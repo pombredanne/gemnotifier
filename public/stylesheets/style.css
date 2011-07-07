@@ -211,7 +211,7 @@ a.signin {
   font-size: 1.1em;
   font-weight: bold; }
 
-div.gem_item {
+div.gem_item, #account {
   margin: 20px 0;
   border: 1px solid #eeeeee;
   background: white;
@@ -224,14 +224,34 @@ div.gem_item {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px; }
 
-div.gem_item .field {
+div.gem_item .field, #account .field {
   margin: 10px 0; }
 
-div.gem_item .field label {
+div.gem_item .field label, #account .field label {
   font-weight: bold;
   display: block;
   width: 200px;
   margin-right: 20px; }
+
+#account {
+  padding: 20px; }
+
+#account h2 {
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: 1px solid #cccccc;
+  padding: 3px 0; }
+
+#account .field input[type='text'] {
+  padding: 2px 3px;
+  width: 200px;
+  border: 1px solid #cccccc;
+  padding: 5px; }
+  #account .field input[type='text']:focus {
+    border-color: #f0f8fb;
+    -moz-box-shadow: 0 0 2px #f0f8fb;
+    -webkit-box-shadow: 0 0 2px #f0f8fb;
+    box-shadow: 0 0 2px #f0f8fb, 0 0 8px rgba(0, 0, 0, 0.25) inset; }
 
 .most_updated_gems, .most_subscribed_gems {
   width: 50%;

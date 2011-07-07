@@ -1,0 +1,20 @@
+<div id="account">
+    <%= form_tag('/account', :method => :put) do %>
+        <h2>Account Info</h2>
+        <div class="field">
+            <label>Name</label>
+            <%= text_field_tag 'user[name]', @user.name %>
+        </div>
+        <div class="field">
+            <label>Nickname</label>
+            <%= text_field_tag 'user[nickname]', @user.nickname %>
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <%= text_field_tag 'user[nickname]', @user.email %>
+        </div>
+        <div class="field">
+            <%= submit_tag 'Update' %>
+        </div>
+    <% end %>
+</div>
