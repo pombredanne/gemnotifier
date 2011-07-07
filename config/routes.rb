@@ -21,6 +21,8 @@ Gemnotifier::Application.routes.draw do
   get "hooks/gems"
   post "hooks/gems"
   
+  resource :account, :except => [:create, :new, :edit], :controller => :account
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
