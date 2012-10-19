@@ -8,4 +8,6 @@ task :cron => :environment do
       NotificationMailer.upgrades(user, user_notifications).deliver
     end
   end
+
+  Notification.delete_all(["upgraded_at < ?", 2.days.ago])
 end
